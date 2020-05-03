@@ -19,22 +19,4 @@ body {
   margin: 0px;
   min-height: 100vh;
 }
-
-.header {
-  padding-top: 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 30vh;
-  &_sns {
-    padding: 12px;
-    width: 120px;
-    display: flex;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
 </style>

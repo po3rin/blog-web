@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <header class="header">
-      <h1>好奇心に殺される</h1>
-      <p>ソフトウェアエンジニア pon のブログサイト</p>
+      <h1 class="title">好奇心に殺される</h1>
+      <p class="sub">ソフトウェアエンジニア pon のブログサイト</p>
       <div class="header_sns">
         <svg width="35" height="35" viewBox="0 0 25 25">
           <path
@@ -60,10 +60,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.header {
+  padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 30vh;
+  &_sns {
+    padding: 24px;
+    width: 120px;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
 .container {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.title {
+  margin: 24px 0px;
+}
+
+.sub {
+  margin: 0px;
 }
 
 .card {
