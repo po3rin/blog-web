@@ -1,8 +1,21 @@
 <template>
   <div class="wrapper">
+    <custom-header />
     <nuxt />
+    <custom-footer />
   </div>
 </template>
+
+<script>
+import CustomFooter from '~/components/Footer'
+import CustomHeader from '~/components/Header'
+export default {
+  components: {
+    CustomHeader,
+    CustomFooter
+  }
+}
+</script>
 
 <style lang="scss">
 html {

@@ -1,5 +1,5 @@
 import Prism from 'prismjs'
-import 'prismjs/themes/prism-tomorrow.css'
+import 'prism-themes/themes/prism-nord.css'
 import 'prismjs/components/prism-go'
 import 'prismjs/components/prism-javascript'
 import 'prismjs/components/prism-docker'
