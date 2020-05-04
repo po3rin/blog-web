@@ -36,10 +36,7 @@
         class="card"
         @click="push(blog.id)"
       >
-        <div
-          class="card_cover"
-          :style="{ backgroundImage: `url(${blog.cover})` }"
-        />
+        <div class="card_cover" :lazy-background="blog.cover" />
         <div class="card_body">
           <p class="card_title">{{ blog.title }}</p>
           <p class="card_description">{{ blog.description }}</p>
@@ -156,11 +153,11 @@ svg {
     vertical-align: baseline;
     background-color: #00ffc4;
     padding: 12px;
-    font-weight: bold;
+    font-weight: 600;
   }
   &_title {
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: 600;
     margin: 24px 0px;
     vertical-align: baseline;
 
@@ -175,10 +172,13 @@ svg {
     font-size: 0.8rem;
   }
   &_cover {
-    height: 430px;
-    width: 380px;
+    height: 400px;
+    width: 340px;
     background-size: cover;
     background-position: bottom;
+
+    transition: all ease 1s;
+    opacity: 0;
   }
   &_body {
     position: absolute;
@@ -188,6 +188,18 @@ svg {
     left: 0;
     width: 74%;
   }
+}
+
+.isLoading {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  opacity: 0;
+}
+
+.isLoaded {
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  opacity: 1;
 }
 
 @media screen and (max-width: 640px) {

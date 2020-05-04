@@ -20,7 +20,9 @@ export default {
 <style lang="scss">
 html {
   -webkit-font-smoothing: antialiased;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: -apple-system, 'Segoe UI', 'Helvetica Neue',
+    'Hiragino Kaku Gothic ProN', メイリオ, meiryo, sans-serif;
+  font-family: sans-serif;
   color: #1d3152;
 }
 

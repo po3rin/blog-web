@@ -68,11 +68,11 @@ footer {
   margin: auto;
   &_name {
     font-size: 1.4rem;
-    font-weight: bold;
+    font-weight: 600;
   }
   &_body {
     padding: 12px 0px;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 0.8rem;
     line-height: 1.8em;
   }

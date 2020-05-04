@@ -30,7 +30,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/prism'],
+  plugins: ['~/plugins/prism', '~/plugins/markdownit'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -52,7 +52,8 @@ module.exports = {
     'nuxt-webfontloader',
 
     // by developer
-    '@nuxtjs/markdownit'
+    // '@nuxtjs/markdownit'
+    'nuxt-lazy-load'
   ],
   webfontloader: {
     google: {

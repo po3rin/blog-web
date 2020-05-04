@@ -33,10 +33,7 @@
           </p>
         </div>
       </div>
-      <div
-        class="post_header_media"
-        :style="{ backgroundImage: `url(${post.cover})` }"
-      />
+      <div class="post_header_media" :lazy-background="post.cover" />
     </div>
     <div class="post">
       <div v-html="$md.render(post.body.split('---')[2])"></div>
@@ -145,8 +142,23 @@ export default {
       width: 50%;
       background-size: cover;
       z-index: 10;
+
+      background-color: rgba(0, 255, 196, 1);
+      transition: all ease 1s;
+      opacity: 0;
     }
   }
+}
+
+.isLoading {
+  filter: blur(15px);
+  background-color: rgba(0, 255, 196, 1);
+  opacity: 1;
+}
+
+.isLoaded {
+  background-color: rgba(0, 255, 196, 0);
+  opacity: 1;
 }
 
 @media screen and (max-width: 640px) {
