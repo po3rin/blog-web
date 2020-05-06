@@ -4,7 +4,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'pon tech',
+    title: '好奇心に殺される。',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -12,7 +12,30 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
-      }
+      },
+      { 'http-equiv': 'x-ua-compatiable', content: 'IE=edge' },
+
+      { property: 'og:url', content: 'https://prismwedding.com' },
+      {
+        property: 'og:image',
+        content:
+          'https://pon-blog-media.s3-ap-northeast-1.amazonaws.com/top.png'
+      },
+      { property: 'og:image:alt', content: 'OGP image' },
+      {
+        property: 'og:title',
+        content: '好奇心に殺される。'
+      },
+      { property: 'og:type', content: 'website' },
+      {
+        property: 'og:description',
+        content:
+          'ソフトウェアエンジニア pon のテックブログです。サーバーサイド、インフラなどの情報を中心に記事にしています。'
+      },
+      { property: 'og:site_name', content: 'PRISM WEDDING' },
+      { property: 'og:locale', content: 'ja_JP' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@po3rin' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -53,8 +76,12 @@ module.exports = {
 
     // by developer
     // '@nuxtjs/markdownit'
+    '@nuxtjs/style-resources',
     'nuxt-lazy-load'
   ],
+  styleResources: {
+    scss: ['~assets/styles/_var.scss']
+  },
   webfontloader: {
     google: {
       families: ['M+PLUS+Rounded+1c']
@@ -72,6 +99,13 @@ module.exports = {
       process.env.NODE_ENV === 'production'
         ? 'https://po3rin.com'
         : 'http://localhost:8080'
+  },
+  proxy: {
+    // '/api/v1/public': 'http://api-service:8888'
+    '/api/v1/public':
+      process.env.NODE_ENV === 'production'
+        ? 'https://po3rin.com'
+        : 'http://localhost:8888'
   },
   markdownit: {
     // preset: 'default',

@@ -18,12 +18,13 @@ export default {
 </script>
 
 <style lang="scss">
+// default css ---------------
 html {
   -webkit-font-smoothing: antialiased;
   font-family: -apple-system, 'Segoe UI', 'Helvetica Neue',
     'Hiragino Kaku Gothic ProN', メイリオ, meiryo, sans-serif;
   font-family: sans-serif;
-  color: #1d3152;
+  color: $sec-color;
 }
 
 h1 {
@@ -33,5 +34,9 @@ h1 {
 body {
   margin: 0px;
   min-height: 100vh;
+}
+
+svg {
+  cursor: pointer;
 }
 </style>

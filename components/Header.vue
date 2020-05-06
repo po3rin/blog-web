@@ -1,9 +1,15 @@
 <template>
   <header class="header">
-    <div class="header_logo" @click="push('/')"></div>
-    <div class="header_item" @click="push('/')">home</div>
-    <div class="header_item" @click="push('/blog')">blog</div>
-    <div class="header_item" @click="push('/about')">about</div>
+    <nuxt-link to="/">
+      <div class="header_logo"></div>
+    </nuxt-link>
+    <nuxt-link to="/">
+      <div class="header_item" @click="push('/')">🏠home</div>
+    </nuxt-link>
+    <!-- <div class="header_item" @click="push('/blog')">blog</div> -->
+    <nuxt-link to="/about">
+      <div class="header_item" @click="push('/about')">😊about</div>
+    </nuxt-link>
   </header>
 </template>
 
@@ -18,9 +24,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  color: $sec-color;
+  text-decoration: none;
+}
+
 .header {
   z-index: 1000000;
-  padding: 24px 48px;
+  padding: 12px 48px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: row;
@@ -28,7 +39,7 @@ export default {
   &_logo {
     width: 36px;
     height: 36px;
-    background-color: #00ffc4;
+    background-color: $main-color;
     margin-right: 24px;
     cursor: pointer;
   }
@@ -38,13 +49,25 @@ export default {
   }
 
   &_item:hover {
-    background: linear-gradient(transparent 70%, #00ffc4 0%);
+    background: linear-gradient(transparent 70%, $main-color 0%);
   }
 }
 
 @media screen and (max-width: 640px) {
   .header {
-    display: none;
+    width: 100%;
+    position: absolute;
+    padding: 8px 0px;
+    &_logo {
+      margin: 0px 8px;
+    }
+    &_item {
+      padding: 8px 8px;
+    }
+    background-color: rgba(255, 255, 255, 1);
+    &_item:hover {
+      background: none;
+    }
   }
 }
 </style>

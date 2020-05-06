@@ -2,6 +2,8 @@
 
 pon's web site, uses on Nuxt.js. this site lists my tech posts.
 
+![screan shot](page.png)
+
 ## Build Setup
 
 ```bash
