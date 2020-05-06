@@ -28,7 +28,7 @@ export default {
     GhIcon
   },
   async asyncData(context) {
-    const res = await context.app.$axios.$get('/post?size=12')
+    const res = await context.app.$axios.$get('api/v1/post?size=12')
     return { blogs: res.data }
   },
   methods: {

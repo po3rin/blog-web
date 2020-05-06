@@ -49,7 +49,7 @@ export default {
   },
   async asyncData(context) {
     const res = await context.app.$axios.$get(
-      `/post/${context.route.params.id}`
+      `api/v1/post/${context.route.params.id}`
     )
     return { post: res.data }
   },
