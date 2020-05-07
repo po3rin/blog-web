@@ -27,9 +27,18 @@ export default {
     TwitterIcon,
     GhIcon
   },
-  async asyncData(context) {
-    const res = await context.app.$axios.$get('api/v1/post?size=12')
-    return { blogs: res.data }
+  asyncData(context) {
+    return context.app.$axios
+      .$get('api/v1/post?size=12')
+      .then((res) => {
+        return { blogs: res.data }
+      })
+      .catch((e) => {
+        context.error({
+          statusCode: e.response.status,
+          message: 'Post not found'
+        })
+      })
   },
   methods: {
     push(id) {

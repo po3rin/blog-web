@@ -22,13 +22,23 @@ export default {
   components: {
     Cards
   },
-  async asyncData(context) {
+  asyncData(context) {
     let tagsQuery = ''
     if (context.query.tags !== '') {
       tagsQuery = `&tags=${context.query.tags}`
     }
-    const res = await context.app.$axios.$get('api/v1/post?size=12' + tagsQuery)
-    return { blogs: res.data }
+
+    return context.app.$axios
+      .$get('api/v1/post?size=12' + tagsQuery)
+      .then((res) => {
+        return { blogs: res.data }
+      })
+      .catch((e) => {
+        context.error({
+          statusCode: e.response.status,
+          message: 'Post not found'
+        })
+      })
   }
 }
 </script>

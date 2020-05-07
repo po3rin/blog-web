@@ -49,11 +49,18 @@ export default {
   components: {
     TwitterIcon
   },
-  async asyncData(context) {
-    const res = await context.app.$axios.$get(
-      `api/v1/post/${context.route.params.id}`
-    )
-    return { post: res.data }
+  asyncData(context) {
+    return context.app.$axios
+      .$get(`api/v1/post/${context.route.params.id}`)
+      .then((res) => {
+        return { post: res.data }
+      })
+      .catch((e) => {
+        context.error({
+          statusCode: e.response.status,
+          message: 'Post not found'
+        })
+      })
   },
   mounted() {
     Prism.highlightAll()
@@ -123,7 +130,7 @@ export default {
   h3,
   h4,
   p {
-    margin: 36px 48px;
+    margin: 24px 48px;
   }
 
   h2 {
