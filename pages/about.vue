@@ -174,6 +174,7 @@ export default {
   width: 50%;
   &_contents {
     padding: 24px 48px;
+    max-width: 280px;
   }
   &_title {
     font-size: 1.1rem;
@@ -209,14 +210,15 @@ export default {
   }
 
   .books {
-    width: 90%;
+    width: 94%;
     flex-direction: column;
+    align-items: center;
   }
 
   .book {
+    width: 100%;
     padding: 12px 12px;
     flex-direction: row;
-    width: 100%;
     &_contents {
       padding: 24px 12px;
     }
