@@ -4,7 +4,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: '好奇心に殺される。',
+    title: '好奇心に殺される。- pon のテックブログ',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -97,7 +97,13 @@ module.exports = {
   axios: {
     baseURL: (function() {
       if (process.env.NODE_ENV === 'production') {
-        return process.client ? 'https://po3rin.com' : 'http://api:8080'
+        return 'http://api:8080'
+      }
+      return 'http://localhost:8080'
+    })(),
+    browserBaseURL: (function() {
+      if (process.env.NODE_ENV === 'production') {
+        return 'https://po3rin.com'
       }
       return 'http://localhost:8080'
     })()

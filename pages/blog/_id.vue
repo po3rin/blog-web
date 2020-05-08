@@ -84,7 +84,7 @@ export default {
   },
   head() {
     return {
-      title: `${this.post.title} - 好奇心に殺される。`,
+      title: `${this.post.title} - 好奇心に殺される。- pon のテックブログ`,
       meta: [
         {
           hid: 'description',
