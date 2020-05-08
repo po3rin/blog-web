@@ -97,7 +97,7 @@ module.exports = {
   axios: {
     baseURL: (function() {
       if (process.env.NODE_ENV === 'production') {
-        return process.browser ? 'https://po3rin.com' : 'http://api:8080'
+        return process.client ? 'https://po3rin.com' : 'http://api:8080'
       }
       return 'http://localhost:8080'
     })()
