@@ -95,17 +95,12 @@ module.exports = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL:
-      process.env.NODE_ENV === 'production'
-        ? 'https://po3rin.com'
-        : 'http://localhost:8080'
-  },
-  proxy: {
-    // '/api/v1/public': 'http://api-service:8888'
-    '/api/v1/public':
-      process.env.NODE_ENV === 'production'
-        ? 'https://po3rin.com'
-        : 'http://localhost:8888'
+    baseURL: (function() {
+      if (process.env.NODE_ENV === 'production') {
+        return process.browser ? 'https://po3rin.com' : 'http://api:8080'
+      }
+      return 'http://localhost:8080'
+    })()
   },
   markdownit: {
     // preset: 'default',

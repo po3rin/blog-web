@@ -34,6 +34,14 @@ export default {
         return { blogs: res.data }
       })
       .catch((e) => {
+        if (e.response === undefined) {
+          context.error({
+            statusCode: 500,
+            message: 'Internal Server Error'
+          })
+          return
+        }
+
         context.error({
           statusCode: e.response.status,
           message: 'Post not found'
