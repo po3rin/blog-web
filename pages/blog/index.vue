@@ -1,6 +1,13 @@
 <template>
   <div class="container">
-    <div v-if="this.$route.query.tags != ''" class="searched">
+    <div
+      v-if="
+        this.$route.query.tags !== '' &&
+          this.$route.query.tags !== null &&
+          this.$route.query.tags !== undefined
+      "
+      class="searched"
+    >
       <p>
         🔍
         <span
@@ -24,7 +31,11 @@ export default {
   },
   asyncData(context) {
     let tagsQuery = ''
-    if (context.query.tags !== '') {
+    if (
+      context.query.tags !== '' &&
+      context.query.tags !== null &&
+      context.query.tags !== undefined
+    ) {
       tagsQuery = `&tags=${context.query.tags}`
     }
 
