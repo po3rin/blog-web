@@ -8,7 +8,7 @@
           </p>
           <h1 class="post_header_title">{{ post.title }}</h1>
           <p class="post_header_desc">{{ post.description }}</p>
-          <div @click="postTwitter()">
+          <div class="sns" @click="postTwitter()">
             <twitter-icon />
           </div>
           <p class="post_header_date">
@@ -34,7 +34,7 @@
             </nuxt-link>
           </div>
         </div>
-        <div class="sns">
+        <div class="sns" @click="postTwitter()">
           <twitter-icon />
         </div>
       </div>
@@ -305,6 +305,11 @@ export default {
     padding: 12px;
     font-size: 0.8rem;
   }
+}
+
+.sns {
+  width: 36px;
+  height: 36px;
 }
 
 .more {
