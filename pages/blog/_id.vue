@@ -41,8 +41,8 @@
     </div>
     <div class="more">
       <p class="section_title">🔍 more !!</p>
-      <cards :blogs="relational" />
     </div>
+    <cards :blogs="relational" />
   </section>
 </template>
 
@@ -236,7 +236,6 @@ export default {
 
   &_header {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     min-height: 70vh;
 
@@ -293,13 +292,11 @@ export default {
   padding: 36px 36px;
   margin: 64px auto 0px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   border-top: 1px $sec-color solid;
 
   &_tags {
     display: flex;
-    flex-direction: row;
   }
 
   &_tag {
@@ -313,8 +310,6 @@ export default {
 .more {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .section_title {
@@ -322,8 +317,6 @@ export default {
   padding: 0 12px;
   background: linear-gradient(transparent 70%, $main-color 0%);
   font-size: 1.2rem;
-  text-align: center;
-  margin: 0px 0px 24px;
 }
 
 @media screen and (max-width: 640px) {
@@ -402,13 +395,11 @@ export default {
     padding: 16px 8px;
     margin: auto;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     border-top: 1px $sec-color solid;
 
     &_tags {
       display: flex;
-      flex-direction: row;
     }
 
     &_tag {

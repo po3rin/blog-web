@@ -17,7 +17,7 @@
           エンジニア3年目です。Goをよく書きます。2020年は今まですっ飛ばしてきた基礎をちゃんと勉強したい。
         </p>
         <p class="profile_skills">
-          Go / Python / Rust / Docker / AWS / Kubernetes
+          Go / Python / Rust / Docker / Kubernetes / AWS
         </p>
       </div>
     </div>
@@ -96,6 +96,9 @@ export default {
 @media screen and (max-width: 640px) {
   .profile {
     width: 90%;
+    &_body {
+      font-size: 0.8rem;
+    }
     &_media {
       width: 90px;
       border-radius: 50% 50% 50% 50%;
