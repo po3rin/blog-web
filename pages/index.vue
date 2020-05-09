@@ -58,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .top {
-  padding-top: 36px;
+  padding: 36px 0 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,7 +68,6 @@ export default {
   &_sns {
     padding: 24px;
     width: 140px;
-    display: flex;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -88,8 +87,17 @@ export default {
 }
 
 @media screen and (max-width: 640px) {
+  .title {
+    font-size: 1.3rem;
+  }
+
   .top {
+    height: 20vh;
     padding-top: 96px;
+    &_sns {
+      padding: 16px;
+      width: 120px;
+    }
   }
 }
 </style>

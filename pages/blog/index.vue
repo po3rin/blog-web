@@ -70,6 +70,7 @@ export default {
 }
 .searched {
   margin: auto;
+  padding: 12px;
   &_label {
     background-color: $main-color;
     padding: 12px;
@@ -79,6 +80,7 @@ export default {
 
 @media screen and (max-width: 640px) {
   .searched {
+    padding: 16px;
     &_label {
       background-color: $main-color;
       padding: 12px;

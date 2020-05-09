@@ -39,4 +39,8 @@ body {
 svg {
   cursor: pointer;
 }
+
+a {
+  word-break: break-all;
+}
 </style>

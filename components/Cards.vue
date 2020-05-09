@@ -136,6 +136,7 @@ export default {
 
 @media screen and (max-width: 640px) {
   .card {
+    margin: 48px 48px;
     &_date {
       display: none;
     }

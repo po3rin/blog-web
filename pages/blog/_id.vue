@@ -199,6 +199,7 @@ export default {
 
   a {
     color: $sec-color;
+    word-break: break-all;
   }
 
   // ------------------------
