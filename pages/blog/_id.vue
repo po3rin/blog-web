@@ -8,7 +8,7 @@
           </p>
           <h1 class="post_header_title">{{ post.title }}</h1>
           <p class="post_header_desc">{{ post.description }}</p>
-          <div class="sns" @click="postTwitter()">
+          <div @click="postTwitter()">
             <twitter-icon />
           </div>
           <p class="post_header_date">
@@ -39,15 +39,21 @@
         </div>
       </div>
     </div>
+    <div class="more">
+      <p class="section_title">🔍 more !!</p>
+      <cards :blogs="relational" />
+    </div>
   </section>
 </template>
 
 <script>
 import Prism from '~/plugins/prism'
 import TwitterIcon from '~/components/sns/Twitter'
+import Cards from '~/components/Cards'
 export default {
   components: {
-    TwitterIcon
+    TwitterIcon,
+    Cards
   },
   asyncData(context) {
     return context.app.$axios
@@ -70,10 +76,34 @@ export default {
         })
       })
   },
+  data() {
+    return {
+      relational: []
+    }
+  },
   mounted() {
     Prism.highlightAll()
+    this.getRelationalArticle() // TODO: lazy request ...
   },
   methods: {
+    getRelationalArticle() {
+      let tagsQuery = ''
+      if (
+        this.post.tags !== '' &&
+        this.post.tags !== null &&
+        this.post.tags !== undefined
+      ) {
+        tagsQuery = `&tags=${this.post.tags}`
+      }
+
+      this.$axios.$get('api/v1/post?size=3' + tagsQuery).then((res) => {
+        const self = this
+        const filterd = res.data.filter(function(d) {
+          return d.id !== self.$route.params.id
+        })
+        this.relational = filterd
+      })
+    },
     postTwitter() {
       window.open(
         `https://twitter.com/share?url=https://po3rin.com/blog/${this.post.id}`,
@@ -137,9 +167,9 @@ export default {
 
 <style lang="scss">
 .post {
-  padding: 64px;
+  padding: 48px 64px;
   margin: auto;
-  max-width: 740px;
+  max-width: 760px;
 
   // for blog ---------------
   hr {
@@ -237,6 +267,7 @@ export default {
 
       background-color: rgba(0, 255, 196, 1);
       transition: all ease 1s;
+      background-position: bottom;
       opacity: 0;
     }
 
@@ -260,7 +291,7 @@ export default {
 
 .footer {
   padding: 36px 36px;
-  margin: auto;
+  margin: 64px auto 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -277,6 +308,22 @@ export default {
     padding: 12px;
     font-size: 0.8rem;
   }
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section_title {
+  display: inline-block;
+  padding: 0 12px;
+  background: linear-gradient(transparent 70%, $main-color 0%);
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0px 0px 24px;
 }
 
 @media screen and (max-width: 640px) {
@@ -313,17 +360,18 @@ export default {
       justify-content: none;
       min-height: 70vh;
       width: 100%;
+      position: relative;
       &_title {
         font-size: 1.2rem;
       }
       &_desc {
-        padding: 12px 0% 12px 0px;
+        padding: 8px 0% 8px 0px;
         font-size: 0.9rem;
       }
       &_info {
-        padding: 32px 8px;
+        padding: 32px 8px 18px;
         position: absolute;
-        bottom: 30%;
+        bottom: 64px;
         left: 0;
         width: 80%;
         z-index: 100;
@@ -343,7 +391,7 @@ export default {
         z-index: 10;
       }
       &_date {
-        margin: 16px 0px 0px;
+        margin: 12px 0px 0px;
         font-size: 0.9rem;
       }
     }

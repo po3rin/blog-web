@@ -77,7 +77,8 @@ module.exports = {
     // by developer
     // '@nuxtjs/markdownit'
     '@nuxtjs/style-resources',
-    'nuxt-lazy-load'
+    'nuxt-lazy-load',
+    '@nuxtjs/google-analytics'
   ],
   styleResources: {
     scss: ['~assets/styles/_var.scss']
@@ -86,6 +87,9 @@ module.exports = {
     // google: {
     //   families: ['M+PLUS+Rounded+1c']
     // }
+  },
+  googleAnalytics: {
+    id: 'UA-47360721-3'
   },
   purgeCSS: {
     whitelistPatternsChildren: [/token$/]
@@ -99,13 +103,13 @@ module.exports = {
       if (process.env.NODE_ENV === 'production') {
         return 'http://api:8080'
       }
-      return 'https://po3rin.com'
+      return 'http://localhost:8080'
     })(),
     browserBaseURL: (function() {
       if (process.env.NODE_ENV === 'production') {
         return 'https://po3rin.com'
       }
-      return 'https://po3rin.com'
+      return 'http://localhost:8080'
     })()
   },
   markdownit: {
