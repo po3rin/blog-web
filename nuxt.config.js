@@ -83,9 +83,9 @@ module.exports = {
     scss: ['~assets/styles/_var.scss']
   },
   webfontloader: {
-    google: {
-      families: ['M+PLUS+Rounded+1c']
-    }
+    // google: {
+    //   families: ['M+PLUS+Rounded+1c']
+    // }
   },
   purgeCSS: {
     whitelistPatternsChildren: [/token$/]
