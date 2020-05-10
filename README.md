@@ -2,6 +2,8 @@
 
 pon's web site, uses on Nuxt.js. this site lists my tech posts.
 
+[po3rin.com](https://po3rin.com)
+
 ![screan shot](page.png)
 
 ## Build Setup
