@@ -200,6 +200,11 @@ export default {
     font-weight: 300;
   }
 
+  ul {
+    font-weight: 300;
+    margin: 24px 48px;
+  }
+
   strong {
     background: linear-gradient(transparent 70%, $main-color 0%);
   }
@@ -347,11 +352,20 @@ export default {
       font-size: 0.9rem;
     }
 
+    ul {
+      margin: 0px;
+    }
+
     pre {
-      font-size: 0.8rem;
+      font-size: 0.74rem;
       border-radius: 0px;
       box-shadow: none;
     }
+
+    blockquote {
+      margin: 12px 12px;
+    }
+
     &_header {
       display: inherit;
       flex-direction: none;
@@ -360,7 +374,7 @@ export default {
       width: 100%;
       position: relative;
       &_title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
       &_desc {
         padding: 8px 0% 8px 0px;
@@ -384,7 +398,7 @@ export default {
       }
       &_media {
         position: relative;
-        height: 80vh;
+        height: 70vh;
         width: 100%;
         z-index: 10;
       }
