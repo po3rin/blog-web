@@ -79,7 +79,7 @@ export default {
     font-size: 1.1rem;
   }
   &_tags {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     position: absolute;
     top: -24px;
     vertical-align: baseline;
@@ -88,7 +88,7 @@ export default {
     font-weight: 600;
   }
   &_title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     margin: 24px 0px;
     vertical-align: baseline;
@@ -104,8 +104,8 @@ export default {
     font-size: 0.8rem;
   }
   &_cover {
-    height: 400px;
-    width: 340px;
+    height: 380px;
+    width: 330px;
     background-size: cover;
     background-position: bottom;
 
@@ -137,6 +137,9 @@ export default {
 @media screen and (max-width: 640px) {
   .card {
     margin: 48px 48px;
+    &_title {
+      font-size: 1rem;
+    }
     &_date {
       display: none;
     }
@@ -147,6 +150,7 @@ export default {
       bottom: -2px;
     }
     &_tags {
+      font-size: 0.8rem;
       top: -36px;
     }
   }

@@ -78,7 +78,7 @@ export default {
   padding: 0 12px;
   margin: 24px 0px;
   background: linear-gradient(transparent 70%, $main-color 0%);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .sub {
@@ -88,11 +88,11 @@ export default {
 
 @media screen and (max-width: 640px) {
   .title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .top {
-    height: 20vh;
+    height: 18vh;
     padding-top: 96px;
     &_sns {
       padding: 16px;
