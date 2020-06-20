@@ -337,7 +337,7 @@ export default {
     h3,
     h4,
     p {
-      margin: 32px 8px;
+      margin: 32px 16px;
     }
 
     h2 {

@@ -1,2 +1,13 @@
 $sec-color: #1d3152;
 $main-color: #00ffc4;
+
+.btn {
+     margin: 24px;
+     padding: 12px;
+     width: 256px;
+     border-radius: 12px;
+     border: 1px $sec-color solid;
+     text-align: center;
+     cursor: pointer;
+     font-weight: 600;
+}

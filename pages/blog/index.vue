@@ -20,11 +20,28 @@
       </p>
     </div>
     <cards :blogs="blogs" />
+    <div class="pager">
+      <div
+        v-if="this.$route.query.page && this.$route.query.page != '1'"
+        class="btn"
+        @click="prevPage()"
+      >
+        前へ
+      </div>
+      <div
+        v-if="parseInt(total) - parseInt(this.$route.query.page) * 6 > 0"
+        class="btn"
+        @click="nextPage()"
+      >
+        次へ
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Cards from '~/components/Cards'
+const pageSize = 6
 export default {
   components: {
     Cards
@@ -39,10 +56,24 @@ export default {
       tagsQuery = `&tags=${context.query.tags}`
     }
 
+    let pageQuery = ''
+    if (
+      context.query.page !== '' &&
+      context.query.page !== 0 &&
+      context.query.page !== null &&
+      context.query.page !== undefined
+    ) {
+      const from = Number(context.query.page)
+      pageQuery = `&from=${(from - 1) * pageSize}`
+    }
+
     return context.app.$axios
-      .$get('api/v1/post?size=12' + tagsQuery)
+      .$get('api/v1/post?size=6' + tagsQuery + pageQuery)
       .then((res) => {
-        return { blogs: res.data }
+        return {
+          blogs: res.data,
+          total: res.total
+        }
       })
       .catch((e) => {
         if (e.response === undefined) {
@@ -58,15 +89,103 @@ export default {
           message: 'Post not found'
         })
       })
+  },
+  data() {
+    return {
+      blogs: [],
+      total: 0
+    }
+  },
+  methods: {
+    syncBlogs(tags, page) {
+      let tagsQuery = ''
+      if (tags !== '' && tags !== null && tags !== undefined) {
+        tagsQuery = `&tags=${tags}`
+      }
+
+      let pageQuery = ''
+      let sizeQuery = ''
+      if (
+        page !== '' &&
+        page !== 0 &&
+        page !== '0' &&
+        page !== null &&
+        page !== undefined
+      ) {
+        const f = parseInt(page)
+        pageQuery = `&from=${(f - 1) * pageSize}`
+        sizeQuery = `&page=${f}`
+      }
+
+      this.$router.push('blog?' + tagsQuery + sizeQuery)
+
+      this.$axios
+        .$get('api/v1/post?size=6' + tagsQuery + pageQuery)
+        .then((res) => {
+          this.blogs = res.data
+          this.total = res.total
+        })
+    },
+    nextPage() {
+      window.scrollTo({
+        top: 0
+      })
+
+      let page = this.$route.query.page
+      if (
+        page === '' ||
+        page === 0 ||
+        page === '0' ||
+        page === null ||
+        page === undefined ||
+        isNaN(page)
+      ) {
+        page = '2'
+      } else {
+        let p = parseInt(page)
+        p++
+        page = p
+      }
+
+      this.syncBlogs(this.$route.query.tags, page)
+    },
+    prevPage() {
+      window.scrollTo({
+        top: 0
+      })
+
+      let page = this.$route.query.page
+      if (
+        page === '' ||
+        page === '0' ||
+        page === 0 ||
+        page === null ||
+        page === undefined ||
+        isNaN(page)
+      ) {
+        page = '1'
+      } else {
+        let p = parseInt(page)
+        p--
+        page = p
+      }
+
+      this.syncBlogs(this.$route.query.tags, page)
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .container {
-  padding-top: 84px;
+  padding: 84px 0px;
   display: flex;
   flex-direction: column;
+}
+.pager {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .searched {
   margin: auto;
@@ -79,6 +198,9 @@ export default {
 }
 
 @media screen and (max-width: 640px) {
+  .container {
+    padding: 84px 0px 12px;
+  }
   .searched {
     padding: 16px;
     &_label {
