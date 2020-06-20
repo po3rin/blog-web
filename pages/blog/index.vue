@@ -127,10 +127,7 @@ export default {
         })
     },
     nextPage() {
-      this.blogs = []
-      window.scrollTo({
-        top: 0
-      })
+      // this.blogs = []
 
       let page = this.$route.query.page
       if (
@@ -149,12 +146,13 @@ export default {
       }
 
       this.syncBlogs(this.$route.query.tags, page)
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
     },
     prevPage() {
-      this.blogs = []
-      window.scrollTo({
-        top: 0
-      })
+      // this.blogs = []
 
       let page = this.$route.query.page
       if (
@@ -173,6 +171,10 @@ export default {
       }
 
       this.syncBlogs(this.$route.query.tags, page)
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
     }
   }
 }
