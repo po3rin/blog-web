@@ -127,6 +127,7 @@ export default {
         })
     },
     nextPage() {
+      this.blogs = []
       window.scrollTo({
         top: 0
       })
@@ -150,6 +151,7 @@ export default {
       this.syncBlogs(this.$route.query.tags, page)
     },
     prevPage() {
+      this.blogs = []
       window.scrollTo({
         top: 0
       })
