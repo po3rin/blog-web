@@ -13,6 +13,7 @@
       </div>
     </section>
     <cards :blogs="blogs" />
+    <div class="btn" @click="push('blog?page=2')">🍙もっと見る！</div>
   </div>
 </template>
 
@@ -29,7 +30,7 @@ export default {
   },
   asyncData(context) {
     return context.app.$axios
-      .$get('api/v1/post?size=12')
+      .$get('api/v1/post?size=6')
       .then((res) => {
         return { blogs: res.data }
       })
@@ -49,14 +50,18 @@ export default {
       })
   },
   methods: {
-    push(id) {
-      this.$router.push({ path: `/blog/${id}` })
+    push(p) {
+      this.$router.push({ path: p })
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.container {
+  padding: 0px 0px 64px;
+}
+
 .top {
   padding: 36px 0 12px;
   display: flex;
@@ -84,6 +89,10 @@ export default {
 .sub {
   margin: 0px;
   font-size: 0.9rem;
+}
+
+.btn {
+  margin: 12px auto;
 }
 
 @media screen and (max-width: 640px) {
