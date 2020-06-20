@@ -29,7 +29,7 @@
       <div class="footer">
         <div class="footer_tags">
           <div v-for="(tag, i) in post.tags" :key="i" class="footer_tag">
-            <nuxt-link :to="`/blog?tags=${tag}`">
+            <nuxt-link :to="`/blog?tags=${tag}&page=1`">
               {{ tag }}
             </nuxt-link>
           </div>
