@@ -138,7 +138,7 @@ export default {
 
 @media screen and (max-width: 640px) {
   .card {
-    margin: 48px 48px;
+    margin: 48px 0px;
     &_title {
       font-size: 1rem;
     }
