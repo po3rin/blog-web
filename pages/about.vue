@@ -69,7 +69,7 @@ export default {
             'Markdown内のGoのコードを検知して gofmt をかけます。README.mdを書く際や、ブログをMarkdownで書く際に有用です。Vim プラグインもあります。',
           lang: 'Go',
           langColor: '#00add8',
-          star: 65
+          star: 85
         },
         {
           name: 'gockerfile',
