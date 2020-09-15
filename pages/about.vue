@@ -93,6 +93,12 @@ export default {
           img: require('@/assets/book8.png'),
           description:
             '第4章「GoとコンセンサスアルゴリズムRaftによる分散システム構築入門」を寄稿'
+        },
+        {
+          name: 'Gopherの休日 2020夏',
+          img: require('@/assets/book9.png'),
+          description:
+            '第4章「Go+Burrows-Wheeler変換で入門する文字列解析の世界」を寄稿'
         }
       ]
     }
