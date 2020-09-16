@@ -96,7 +96,7 @@ export default {
         },
         {
           name: 'Gopherの休日 2020夏',
-          img: require('@/assets/book9.png'),
+          img: require('@/assets/book9.jpeg'),
           description:
             '第4章「Go+Burrows-Wheeler変換で入門する文字列解析の世界」を寄稿'
         }
