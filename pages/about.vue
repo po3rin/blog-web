@@ -165,7 +165,7 @@ export default {
 }
 
 .books {
-  width: 50%;
+  width: 70%;
   margin: auto;
   display: flex;
   flex-direction: row;
