@@ -9,5 +9,6 @@ import 'prismjs/components/prism-json'
 import 'prismjs/components/prism-yaml'
 import 'prismjs/components/prism-rust'
 import 'prismjs/components/prism-python'
+import 'prismjs/components/prism-java'
 
 export default Prism
