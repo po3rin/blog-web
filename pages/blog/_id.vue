@@ -390,6 +390,7 @@ export default {
         background-color: white;
       }
       &_tags {
+        font-size: 0.8rem;
         position: absolute;
         padding: 8px;
         top: -40px;
