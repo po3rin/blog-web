@@ -26,7 +26,10 @@ module.exports = {
         content :
             'ソフトウェアエンジニア pon のテックブログです。サーバーサイド、インフラなどの情報を中心に記事にしています。'
       },
-      {property : 'og:site_name', content : '好奇心に殺される。- pon のテックブログ'},
+      {
+        property : 'og:site_name',
+        content : '好奇心に殺される。- pon のテックブログ'
+      },
       {property : 'og:locale', content : 'ja_JP'},
       {name : 'twitter:card', content : 'summary_large_image'},
       {name : 'twitter:site', content : '@po3rin'}

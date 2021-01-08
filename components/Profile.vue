@@ -14,7 +14,7 @@
         <p class="profile_name">pon</p>
         <div class="line"></div>
         <p class="profile_body">
-          エンジニア3年目です。Goをよく書きます。2020年は今まですっ飛ばしてきた基礎をちゃんと勉強したい。
+          エンジニア4年目です。Goをよく書きます。2021年は今まですっ飛ばしてきた基礎をちゃんと勉強したい。
         </p>
         <p class="profile_skills">
           Go / Python / Rust / Docker / Kubernetes / AWS
