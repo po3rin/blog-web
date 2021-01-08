@@ -36,7 +36,7 @@ jobs:
 
     - name: Install yq
       run: |
-        brew install yq@3.4.1
+        brew install yq@3
 
     - name: Clone manifest repository
       uses: actions/checkout@v2
