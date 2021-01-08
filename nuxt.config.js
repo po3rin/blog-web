@@ -85,7 +85,7 @@ module.exports = {
   axios : {
     baseURL : (function() {
       if (process.env.NODE_ENV === 'production') {
-        return 'http://api:8080'
+        return 'https://po3rin.com'
       }
       return 'http://localhost:8080'
     })(),
