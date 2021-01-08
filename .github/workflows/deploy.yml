@@ -36,7 +36,7 @@ jobs:
 
     - name: Install yq
       run: |
-        brew install yq@3
+        brew install --build-from-source yq@3
 
     - name: Clone manifest repository
       uses: actions/checkout@v2
@@ -52,6 +52,7 @@ jobs:
         yq --version
         IMAGE_TAG=$(echo ${{ github.ref }} | sed -e "s#refs/tags/##g")
         yq w -i web/values.yaml container.image.tag $IMAGE_TAG
+        yq eval 'container.image.tag = $IMAGE_TAG' web/values.yaml
         git diff
         git config user.email abctail30@gmail.com
         git config user.name po3rin
