@@ -85,15 +85,15 @@ module.exports = {
   axios : {
     baseURL : (function() {
       if (process.env.NODE_ENV === 'production') {
-        return 'https://po3rin.com'
+        return 'https://blog-api-gjqqouyuca-an.a.run.app'
       }
-      return 'http://localhost:8080'
+      return 'https://blog-api-gjqqouyuca-an.a.run.app'
     })(),
     browserBaseURL : (function() {
       if (process.env.NODE_ENV === 'production') {
-        return 'https://po3rin.com'
+        return 'https://blog-api-gjqqouyuca-an.a.run.app'
       }
-      return 'http://localhost:8080'
+      return 'https://blog-api-gjqqouyuca-an.a.run.app'
     })()
   },
   markdownit : {
