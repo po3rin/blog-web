@@ -60,7 +60,7 @@ export default {
             'ブログなどで GitHub リポジトリを共有する為に、OGP風画像を生成するツールです。CLIや、サーバーモード、WEB版もあります。',
           lang: 'Go',
           langColor: '#00add8',
-          star: 113
+          star: 137
         },
         {
           name: 'gofmtmd',
@@ -78,7 +78,7 @@ export default {
             'BuildKit Frontendとして数行のYAMLでマルチステージビルド済みのGoバイナリを含んだDocker Imageを生成します。',
           lang: 'Go',
           langColor: '#00add8',
-          star: 25
+          star: 28
         }
       ],
       books: [
