@@ -1,11 +1,6 @@
 <template>
   <div class="cards">
-    <div
-      v-for="blog in blogs"
-      :key="blog.id"
-      class="card"
-      @click="push(blog.id)"
-    >
+    <div v-for="blog in blogs" :key="blog.id" class="card" @click="push(blog)">
       <div class="card_cover" :lazy-background="blog.cover" />
       <div class="card_body">
         <p class="card_title">{{ blog.title }}</p>
@@ -35,8 +30,11 @@ export default {
     }
   },
   methods: {
-    push(id) {
-      this.$router.push({ path: `/blog/${id}` })
+    push(blog) {
+      if (blog.is_external) {
+        window.open(blog.external_url)
+      }
+      this.$router.push({ path: `/blog/${blog.id}` })
     },
     toWindow(url) {
       window.open(url)
