@@ -33,6 +33,7 @@ export default {
     push(blog) {
       if (blog.is_external) {
         window.open(blog.external_url)
+        return
       }
       this.$router.push({ path: `/blog/${blog.id}` })
     },
