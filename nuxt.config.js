@@ -7,26 +7,47 @@ module.exports = {
     title : '好奇心に殺される。- pon のテックブログ',
     meta : [
       {charset : 'utf-8'},
-      {name : 'viewport', content : 'width=device-width, initial-scale=1'}, {
+      {
+        name : 'viewport', content : 'width=device-width, initial-scale=1'
+      },
+      {
         hid : 'description',
         name : 'description',
         content : process.env.npm_package_description || ''
       },
-      {'http-equiv' : 'x-ua-compatiable', content : 'IE=edge'},
-
-      {property : 'og:url', content : 'https://po3rin.com'}, {
+      {
+        hid: 'og:url',
+        property : 'og:url',
+        content : 'https://po3rin.com'}, 
+      {
+        hid: 'og:image',
         property : 'og:image',
         content :
             'https://pon-blog-media.s3-ap-northeast-1.amazonaws.com/top.png'
       },
-      {property : 'og:image:alt', content : 'OGP image'},
-      {property : 'og:title', content : '好奇心に殺される。- pon のテックブログ'},
-      {property : 'og:type', content : 'website'}, {
+      {
+        hid: 'og:image:alt',
+        property : 'og:image:alt',
+        content : 'OGP image'
+      },
+      {
+        hid: 'og:title',
+        property : 'og:title',
+        content : '好奇心に殺される。- pon のテックブログ'
+      },
+      {
+        hid: 'og:type',
+        property : 'og:type',
+        content : 'website'
+      },
+      {
+        hid: 'og:description',
         property : 'og:description',
         content :
             'ソフトウェアエンジニア pon のテックブログです。サーバーサイド、インフラなどの情報を中心に記事にしています。'
       },
       {
+        hid: 'og:site_name',
         property : 'og:site_name',
         content : '好奇心に殺される。- pon のテックブログ'
       },
