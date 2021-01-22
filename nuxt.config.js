@@ -20,7 +20,7 @@ module.exports = {
             'https://pon-blog-media.s3-ap-northeast-1.amazonaws.com/top.png'
       },
       {property : 'og:image:alt', content : 'OGP image'},
-      {property : 'og:title', content : '好奇心に殺される。'},
+      {property : 'og:title', content : '好奇心に殺される。- pon のテックブログ'},
       {property : 'og:type', content : 'website'}, {
         property : 'og:description',
         content :
