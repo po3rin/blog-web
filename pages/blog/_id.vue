@@ -131,7 +131,11 @@ export default {
           property: 'og:title',
           content: `${this.post.title} - 好奇心に殺される。`
         },
-        { hid: 'og:type', property: 'og:type', content: 'article' },
+        { 
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'article'
+        },
         {
           hid: 'og:description',
           property: 'og:description',
@@ -152,13 +156,21 @@ export default {
           name: 'twitter:card',
           content: 'summary_large_image'
         },
-        { hid: 'twitter:site', name: 'twitter:site', content: '@po3rin' },
+        {
+          hid: 'twitter:site',
+          name: 'twitter:site',
+          content: '@po3rin'
+        },
         {
           hid: 'og:site_name',
           property: 'og:site_name',
           content: `${this.post.title} - 好奇心に殺される。`
         },
-        { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
+        {
+          hid: 'og:locale',
+          property: 'og:locale',
+          content: 'ja_JP'
+        },
         {
           hid: 'og:site_name',
           name: 'twotter:image',
