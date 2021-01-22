@@ -3,60 +3,60 @@ module.exports = {
   /*
    ** Headers of the page
    */
-  head : {
-    title : '好奇心に殺される。- pon のテックブログ',
-    meta : [
-      {charset : 'utf-8'},
-      {
-        name : 'viewport', content : 'width=device-width, initial-scale=1'
-      },
-      {
-        hid : 'description',
-        name : 'description',
-        content : process.env.npm_package_description || ''
-      },
-      {
-        hid: 'og:url',
-        property : 'og:url',
-        content : 'https://po3rin.com'}, 
-      {
-        hid: 'og:image',
-        property : 'og:image',
-        content :
-            'https://pon-blog-media.s3-ap-northeast-1.amazonaws.com/top.png'
-      },
-      {
-        hid: 'og:image:alt',
-        property : 'og:image:alt',
-        content : 'OGP image'
-      },
-      {
-        hid: 'og:title',
-        property : 'og:title',
-        content : '好奇心に殺される。- pon のテックブログ'
-      },
-      {
-        hid: 'og:type',
-        property : 'og:type',
-        content : 'website'
-      },
-      {
-        hid: 'og:description',
-        property : 'og:description',
-        content :
-            'ソフトウェアエンジニア pon のテックブログです。サーバーサイド、インフラなどの情報を中心に記事にしています。'
-      },
-      {
-        hid: 'og:site_name',
-        property : 'og:site_name',
-        content : '好奇心に殺される。- pon のテックブログ'
-      },
-      {property : 'og:locale', content : 'ja_JP'},
-      {name : 'twitter:card', content : 'summary_large_image'},
-      {name : 'twitter:site', content : '@po3rin'}
-    ],
-    link : [ {rel : 'icon', type : 'image/x-icon', href : '/favicon.ico'} ]
-  },
+  // head : {
+  //   title : '好奇心に殺される。- pon のテックブログ',
+  //   meta : [
+  //     {charset : 'utf-8'},
+  //     {
+  //       name : 'viewport', content : 'width=device-width, initial-scale=1'
+  //     },
+  //     {
+  //       hid : 'description',
+  //       name : 'description',
+  //       content : process.env.npm_package_description || ''
+  //     },
+  //     {
+  //       hid: 'og:url',
+  //       property : 'og:url',
+  //       content : 'https://po3rin.com'}, 
+  //     {
+  //       hid: 'og:image',
+  //       property : 'og:image',
+  //       content :
+  //           'https://pon-blog-media.s3-ap-northeast-1.amazonaws.com/top.png'
+  //     },
+  //     {
+  //       hid: 'og:image:alt',
+  //       property : 'og:image:alt',
+  //       content : 'OGP image'
+  //     },
+  //     {
+  //       hid: 'og:title',
+  //       property : 'og:title',
+  //       content : '好奇心に殺される。- pon のテックブログ'
+  //     },
+  //     {
+  //       hid: 'og:type',
+  //       property : 'og:type',
+  //       content : 'website'
+  //     },
+  //     {
+  //       hid: 'og:description',
+  //       property : 'og:description',
+  //       content :
+  //           'ソフトウェアエンジニア pon のテックブログです。サーバーサイド、インフラなどの情報を中心に記事にしています。'
+  //     },
+  //     {
+  //       hid: 'og:site_name',
+  //       property : 'og:site_name',
+  //       content : '好奇心に殺される。- pon のテックブログ'
+  //     },
+  //     {property : 'og:locale', content : 'ja_JP'},
+  //     {name : 'twitter:card', content : 'summary_large_image'},
+  //     {name : 'twitter:site', content : '@po3rin'}
+  //   ],
+  //   link : [ {rel : 'icon', type : 'image/x-icon', href : '/favicon.ico'} ]
+  // },
   /*
    ** Customize the progress-bar color
    */
