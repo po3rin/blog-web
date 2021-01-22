@@ -52,6 +52,11 @@ module.exports = {
         content : '好奇心に殺される。- pon のテックブログ'
       },
       {property : 'og:locale', content : 'ja_JP'},
+      {
+        hid: 'og:site_name',
+        name: 'twotter:image',
+        content: 'https://pon-blog-media.s3-ap-northeast-1.amazonaws.com/top.png'
+      },
       {name : 'twitter:card', content : 'summary_large_image'},
       {name : 'twitter:site', content : '@po3rin'}
     ],

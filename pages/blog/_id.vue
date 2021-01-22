@@ -158,7 +158,12 @@ export default {
           property: 'og:site_name',
           content: `${this.post.title} - 好奇心に殺される。`
         },
-        { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' }
+        { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
+        {
+          hid: 'og:site_name',
+          name: 'twotter:image',
+          content: this.post.cover
+        }
       ]
     }
   }
