@@ -117,48 +117,48 @@ export default {
       title: `${this.post.title} - 好奇心に殺される。- pon のテックブログ`,
       meta: [
         {
-          hid: 'description',
+          hid: 'description-${this.post.id}',
           name: 'description',
           content: this.post.description
         },
         {
-          hid: 'og:url',
+          hid: 'og:url-${this.post.id}',
           property: 'og:url',
           content: `https://po3rin.com/blog/${this.post.id}`
         },
         {
-          hid: 'og:title',
+          hid: 'og:title-${this.post.id}',
           property: 'og:title',
           content: `${this.post.title} - 好奇心に殺される。`
         },
         { hid: 'og:type', property: 'og:type', content: 'article' },
         {
-          hid: 'og:description',
+          hid: 'og:description-${this.post.id}',
           property: 'og:description',
           content: this.post.description
         },
         {
-          hid: 'og:image',
+          hid: 'og:image-${this.post.id}',
           property: 'og:image',
           content: this.post.cover
         },
         {
-          hid: 'og:image:alt',
+          hid: 'og:image:alt-${this.post.id}',
           property: 'og:image:alt',
           content: 'OGP image'
         },
         {
-          hid: 'twitter:card',
+          hid: 'twitter:card-${this.post.id}',
           name: 'twitter:card',
           content: 'summary_large_image'
         },
-        { hid: 'twitter:site', name: 'twitter:site', content: '@po3rin' },
+        { hid: 'twitter:site-${this.post.id}', name: 'twitter:site', content: '@po3rin' },
         {
-          hid: 'og:site_name',
+          hid: 'og:site_name-${this.post.id}',
           property: 'og:site_name',
           content: `${this.post.title} - 好奇心に殺される。`
         },
-        { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' }
+        { hid: 'og:locale-${this.post.id}', property: 'og:locale', content: 'ja_JP' }
       ]
     }
   }
