@@ -131,7 +131,7 @@ export default {
           property: 'og:title',
           content: `${this.post.title} - 好奇心に殺される。`
         },
-        { 
+        {
           hid: 'og:type',
           property: 'og:type',
           content: 'article'
