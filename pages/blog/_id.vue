@@ -457,6 +457,12 @@ export default {
         font-size: 0.9rem;
       }
     }
+
+    .table-of-contents {
+      ul {
+        margin: 60px 12px;
+      }
+    }
   }
 
   .footer {
