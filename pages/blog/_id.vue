@@ -131,7 +131,11 @@ export default {
           property: 'og:title',
           content: `${this.post.title} - 好奇心に殺される。`
         },
-        { hid: 'og:type', property: 'og:type', content: 'article' },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'article'
+        },
         {
           hid: 'og:description',
           property: 'og:description',
@@ -152,13 +156,26 @@ export default {
           name: 'twitter:card',
           content: 'summary_large_image'
         },
-        { hid: 'twitter:site', name: 'twitter:site', content: '@po3rin' },
+        {
+          hid: 'twitter:site',
+          name: 'twitter:site',
+          content: '@po3rin'
+        },
         {
           hid: 'og:site_name',
           property: 'og:site_name',
           content: `${this.post.title} - 好奇心に殺される。`
         },
-        { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' }
+        {
+          hid: 'og:locale',
+          property: 'og:locale',
+          content: 'ja_JP'
+        },
+        {
+          hid: 'og:site_name',
+          name: 'twotter:image',
+          content: this.post.cover
+        }
       ]
     }
   }
@@ -235,6 +252,38 @@ export default {
   a {
     color: $sec-color;
     word-break: break-all;
+  }
+
+  .table-of-contents {
+    ul {
+      // border: solid 2px rgba(0, 255, 196, 1);
+      padding: 1em 1em 0.5em 2.3em;
+      position: relative;
+      margin-top: 4em;
+      border: solid 1px rgba(0, 255, 196, 1);
+    }
+    ul li {
+      font-size: 0.9rem;
+      line-height: 2em;
+      padding: 0.5em 0;
+      list-style-type: none !important;
+    }
+    ul li:before {
+      /*リストのアイコン*/
+      content: '■';
+      position: absolute;
+      left: 1em; /*左端からのアイコンまでの距離*/
+      color: rgba(0, 255, 196, 1); /*アイコン色*/
+    }
+    ul li:after {
+      background: rgba(0, 255, 196, 1);
+      position: absolute;
+      left: -1px;
+      bottom: 100%;
+      padding: 4px 10px;
+      content: 'Contents'; /*アイコンコード＋文字*/
+      letter-spacing: 0.05em; /*字間*/
+    }
   }
 
   // ------------------------
@@ -406,6 +455,12 @@ export default {
       &_date {
         margin: 12px 0px 0px;
         font-size: 0.9rem;
+      }
+    }
+
+    .table-of-contents {
+      ul {
+        margin: 60px 12px;
       }
     }
   }

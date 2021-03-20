@@ -17,7 +17,7 @@
           エンジニア4年目です。Goをよく書きます。2021年は今まですっ飛ばしてきた基礎をちゃんと勉強したい。
         </p>
         <p class="profile_skills">
-          Go / Python / Rust / Docker / Kubernetes / AWS
+          Go / Python / Rust / Elasticsearch / GCP / Kubernetes / NLP
         </p>
       </div>
     </div>
