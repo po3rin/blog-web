@@ -14,10 +14,10 @@
         <p class="profile_name">pon</p>
         <div class="line"></div>
         <p class="profile_body">
-          エンジニア4年目です。Goをよく書きます。2021年は今まですっ飛ばしてきた基礎をちゃんと勉強したい。
+          エンジニア4年目です。GoとPythonをよく書きます。情報検索が好き。
         </p>
         <p class="profile_skills">
-          Go / Python / Rust / Elasticsearch / GCP / Kubernetes / NLP
+          Go / Python / Rust / Search Engine / GCP / Kubernetes / NLP
         </p>
       </div>
     </div>
