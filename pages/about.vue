@@ -60,7 +60,7 @@ export default {
             'ブログなどで GitHub リポジトリを共有する為に、OGP風画像を生成するツールです。CLIや、サーバーモード、WEB版もあります。',
           lang: 'Go',
           langColor: '#00add8',
-          star: 113
+          star: 149
         },
         {
           name: 'gofmtmd',
@@ -69,7 +69,7 @@ export default {
             'Markdown内のGoのコードを検知して gofmt をかけます。README.mdを書く際や、ブログをMarkdownで書く際に有用です。Vim プラグインもあります。',
           lang: 'Go',
           langColor: '#00add8',
-          star: 85
+          star: 87
         },
         {
           name: 'gockerfile',
@@ -78,7 +78,7 @@ export default {
             'BuildKit Frontendとして数行のYAMLでマルチステージビルド済みのGoバイナリを含んだDocker Imageを生成します。',
           lang: 'Go',
           langColor: '#00add8',
-          star: 25
+          star: 29
         }
       ],
       books: [
