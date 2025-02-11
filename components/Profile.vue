@@ -14,7 +14,7 @@
         <p class="profile_name">pon</p>
         <div class="line"></div>
         <p class="profile_body">
-          エンジニア9年目です。GoとPythonをよく書きます。検索エンジン大好き。業務では良く検索エンジンの精度向上を任されます。
+          エンジニア9年目です。GoとPythonをよく書きます。情報検索が好き。
         </p>
         <p class="profile_skills">
           Go / Python / Kubernetes / AWS / Google Cloud / Elasticsearch /NLP
