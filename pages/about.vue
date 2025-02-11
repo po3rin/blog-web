@@ -99,6 +99,24 @@ export default {
           img: require('@/assets/book9.jpeg'),
           description:
             '第4章「Go+Burrows-Wheeler変換で入門する文字列解析の世界」を寄稿'
+        },
+        {
+          name: 'エムスリーテックブック5',
+          img: require('@/assets/techbook5.png'),
+          description:
+            '第4章「検索エンジンにおけるReindex後の差分反映問題への挑戦」を寄稿'
+        },
+        {
+          name: 'エムスリーテックブック6',
+          img: require('@/assets/techbook6.png'),
+          description:
+            '第7章「LLM で作るテストコレクションで検索オフライン評価基盤を実現するための戦い」を寄稿'
+        },
+        {
+          name: 'エムスリーテックブック7',
+          img: require('@/assets/techbook7.jpeg'),
+          description:
+            '第2章「Zoekt によるコード検索基盤開発と内部実装の読解」を寄稿'
         }
       ]
     }
