@@ -1,4 +1,4 @@
-FROM node:14.1.0-alpine as builder
+FROM node:22.9.0-alpine as builder
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ RUN yarn --frozen-lockfile --non-interactive && node-clean
 ADD . ./
 RUN yarn build
 
-FROM node:14.1.0-alpine
+FROM node:22.9.0-alpine
 
 WORKDIR /app
 ENV HOST=0.0.0.0
