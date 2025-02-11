@@ -27,7 +27,11 @@
     "nuxt-webfontloader": "^1.1.0",
     "prism-themes": "^1.4.0",
     "prismjs": "^1.20.0",
+<<<<<<< Updated upstream
     "sass-embedded": "^1.83.4",
+=======
+    "sass": "^1.84.0",
+>>>>>>> Stashed changes
     "sass-loader": "^8.0.2"
   },
   "devDependencies": {
