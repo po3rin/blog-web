@@ -14,10 +14,10 @@
         <p class="profile_name">pon</p>
         <div class="line"></div>
         <p class="profile_body">
-          エンジニア9年目です。GoとPythonをよく書きます。情報検索が好き。
+          エンジニア8年目です。GoとPythonをよく書きます。情報検索が好き。
         </p>
         <p class="profile_skills">
-          Go / Python / Kubernetes / AWS / Google Cloud / Elasticsearch /NLP
+          Go / Python / Kubernetes / AWS / Google Cloud / Elasticsearch / NLP
         </p>
       </div>
     </div>
