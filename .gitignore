@@ -88,3 +88,10 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# .nuxtディレクトリ配下のもののうち、distディレクトリのみignoreから除外する。
+.nuxt/*
+!.nuxt/dist/
+
+# Nuxt3.8以下は、ルートにdistディレクトリが生成されるので、そのままコメントアウトする。
+# dist
