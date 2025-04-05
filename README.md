@@ -1,5 +1,9 @@
 # blog-web
 
+## Warn
+
+すでに Next に移行ずみ
+
 ![Release Image](https://github.com/po3rin/blog-web/workflows/Release%20Image/badge.svg)
 
 pon's web site, uses on Nuxt.js. this site lists my tech posts.
