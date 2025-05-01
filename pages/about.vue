@@ -114,7 +114,7 @@ export default {
         },
         {
           name: 'エムスリーテックブック7',
-          img: require('@/assets/techbook7.jpeg'),
+          img: require('@/assets/techbook7.png'),
           description:
             '第2章「Zoekt によるコード検索基盤開発と内部実装の読解」を寄稿'
         }
